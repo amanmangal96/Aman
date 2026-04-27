@@ -1,1 +1,31 @@
-<h1>hello aman1</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Our First Month ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff;overflow:hidden}.slide{position:fixed;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease}.slide.active{opacity:1}.overlay{position:fixed;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),rgba(0,0,0,.2))}.content{position:fixed;left:0;right:0;bottom:0;padding:28px;text-align:center}h1{margin:0 0 10px;font-size:2rem}p{margin:0;font-size:1.05rem;line-height:1.5}.top{position:fixed;top:16px;left:0;right:0;text-align:center;font-weight:bold}.btn{margin-top:18px;border:none;padding:12px 24px;border-radius:999px;background:#ff4d88;color:#fff}.note{font-size:.9rem;opacity:.8;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="slide active" style="background-image:url('pic1.jpg')"></div>
+<div class="slide" style="background-image:url('pic2.jpg')"></div>
+<div class="slide" style="background-image:url('pic3.jpg')"></div>
+<div class="slide" style="background-image:url('pic4.jpg')"></div>
+<div class="slide" style="background-image:url('pic5.jpg')"></div>
+<div class="overlay"></div>
+<div class="top">OUR FIRST MONTH ❤️</div>
+<div class="content">
+<h1 id="title">Happy One Month, Shivangi ✨</h1>
+<p id="caption">One month of smiles, memories, and moments I'll always cherish.</p>
+<button class="btn" onclick="nextSlide()">Next Memory 💕</button>
+</div>
+<script>
+const captions=["One month of smiles, memories, and moments I'll always cherish.","Every picture has a story... and I love ours ❤️","Thank you for making ordinary days feel special.","Still my favorite person to look at 😌","Happy one month to us... many more to come ✨"];
+let current=0;const slides=document.querySelectorAll('.slide');
+function showSlide(i){slides.forEach(s=>s.classList.remove('active'));slides[i].classList.add('active');document.getElementById('caption').innerText=captions[i];if(i===4){document.getElementById('title').innerText='Happy One Month, Shivangi ❤️';}}
+function nextSlide(){current=(current+1)%slides.length;showSlide(current);}setInterval(nextSlide,4000);
+</script>
+</body>
+</html>
