@@ -23,7 +23,7 @@
 <button class="btn" onclick="nextSlide()">Next Memory 💕</button>
 </div>
 <script>
-const captions=["One month of smiles, memories, and moments I'll always cherish.","Every picture has a story... and I love ours ❤️","Thank you for making ordinary days feel special.","Still my favorite person to look at 😌","Happy one month to us... many more to come ✨"];
+const captions=["One month of smiles, memories, and moments I'll always cherish.","Every picture has a story... and I love ours ❤️","Thank you for making ordinary days feel special.","Still my favorite person to look at 😌","Happy one month to us... many more to come ✨","Love you a lot♥️"];
 let current=0;const slides=document.querySelectorAll('.slide');
 function showSlide(i){slides.forEach(s=>s.classList.remove('active'));slides[i].classList.add('active');document.getElementById('caption').innerText=captions[i];if(i===4){document.getElementById('title').innerText='Happy One Month, Shivangi ❤️';}}
 function nextSlide(){current=(current+1)%slides.length;showSlide(current);}setInterval(nextSlide,4000);
